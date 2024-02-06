@@ -1,0 +1,63 @@
+A. R(A,B,C,D,E)
+
+Fds:
+D -> B
+C,E -> A 
+
+D->B is not in BCNF as the closure of this functional dependancy does not contain itself and all other attributes. 
+Therefore we decompose into two relations:
+
+R1(D,B) & R2(A,C,D,E)
+The first relation now satisfies the functional dependancy based on its attributes. However, the second funcitonal dependancy is not 
+consistent with the second relational table. So we decompose based on the closure of C,E which contains C,E,A. When decomposing, the closure
+of X or in this example (C,E) is made into its own relation  R3(C,E,A) and (C,E) is conserved in the new relation R4 with the remaining attribute D, whcih we know.
+
+
+R3(C,E,A) & R4(C,D,E)
+
+Now the all funcitonal dependencies hold with relations R1, R3, R4.
+
+
+B. S(A,B,C,D,E)
+
+Fds:
+B,C -> A 
+A -> E 
+D,E -> B 
+
+First step, just as in the last quesiton is to find the closure of each functional dependancy. 
+{B,C}+ = (B,C,A,E)
+{A}+ = (A, E)
+{D,E}+ = (D,E,B)
+
+Next, we see if the closures contain all attributes and themselves. In the first Fd it does not. So the same process as above is applied to split
+the S(A,B,C,D,E) relation.
+
+It becomes:
+S1(B,C,A,E) & S2(B,C,D)
+
+Now to check the second relation which is also not in BCNF meaning we must split S1 into S3/S4.
+The S1 relation under the second Fd closure now becomes
+
+S3(A,E) & S4(B,C,A)
+
+Now every relevant functional dependancy is consereved in the relations S2, S3, S4.
+
+C. There are no non-trivial functional dependencies because no attribute depends on any other attribute in the closed set, therefore all functional dependencies
+in this case are trivial. e.g. A->A, B->B, C->C, D->D
+
+D.
+A -> B
+B -> C
+C -> D
+D -> A
+
+
+E.
+B -> C
+C -> B
+BC -> A
+BC -> D
+
+
+
