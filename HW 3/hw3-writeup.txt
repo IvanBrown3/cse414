@@ -1,0 +1,7 @@
+From my experience with Azure SQL sever I can tell that it is a very powerful cloud database 
+platform. Besides its faster computational time, I didnt feel like it was all that different than
+how we used sqlite as a class. I wish that the class taught more about how Azures sever is so much faster. 
+Besides this I thought that it was very smooth and easy to use, however I wish that you could save you
+queries a little easier. Overall, I would recommend this product to a friend much faster than I would 
+ever recommend sqlite. I think that this database server has all capabilities that one would need to 
+try out their own queries and start experimenting. I would recommend this sever to a friend, coworker or peer.
